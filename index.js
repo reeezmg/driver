@@ -199,7 +199,7 @@ app.post('/api/print-bill', async (req, res) => {
         '          ' + // 13 spaces (adjust as needed)
         textStart(formatMoney(bill.tvalue), COLUMN_WIDTHS.value) +
         textStart(formatMoney(bill.tdiscount), COLUMN_WIDTHS.disc) +
-        textStart(formatMoney(bill.subtotal), COLUMN_WIDTHS.tvalue)
+        textStart(formatMoney(bill.ttvalvue), COLUMN_WIDTHS.tvalue)
       )
       .style('normal') // End bold
       .drawLine();
