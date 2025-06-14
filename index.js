@@ -234,7 +234,7 @@ app.post('/api/print-bill', async (req, res) => {
 
         if (upiPayment) {
           const tn = encodeURIComponent(`Payment for Invoice ID ${bill.invoiceNumber}`);
-          const qrLink = `upi://pay?pa=${bill.upiId}&pn=${bill.accHolderName}&tn=${tn}&am=${upiPayment.amount}&cu=INR`;
+          const qrLink = `upi://pay?pa=${bill.upiId}&am=${upiPayment.amount}&cu=INR`;
 
           printer
             .align('ct')
