@@ -174,7 +174,7 @@ app.post('/api/print-bill', async (req, res) => {
           textStart(index+1, COLUMN_WIDTHS.sl) +
           textStart(item.description, COLUMN_WIDTHS.description) +
           textStart(item.hsn, COLUMN_WIDTHS.hsn) +
-          textStart(`${item.tax}%`, COLUMN_WIDTHS.tax)
+          textStart(item.tax, COLUMN_WIDTHS.tax)
         )
         .raw(Buffer.from([0x1B, 0x4A, 10]));
 
